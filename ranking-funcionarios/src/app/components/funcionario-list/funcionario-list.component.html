@@ -1,1 +1,13 @@
-<p>funcionario-list works!</p>
+<h2>Lista de Funcionários</h2>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Pontos</th>
+    <th>Meta</th>
+  </tr>
+  <tr *ngFor="let funcionario of funcionarios">
+    <td>{{ funcionario.nome }}</td>
+    <td>{{ funcionario.pontos }}</td>
+    <td>{{ funcionario.meta }}</td>
+  </tr>
+</table>
