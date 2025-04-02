@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service'; // ajuste o caminho se necessário
-import { Funcionario } from '../../models/funcionario.model'; // ajuste o caminho se necessário
+import { Funcionario } from '../../models/funcionario.model';
 
 @Component({
   selector: 'app-funcionario-list',
