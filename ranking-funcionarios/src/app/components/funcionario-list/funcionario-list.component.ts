@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FuncionarioService } from '../../services/funcionario.service'; // ajuste o caminho se necessário
+import { Funcionario } from '../../models/funcionario.model'; // ajuste o caminho se necessário
 
 @Component({
   selector: 'app-funcionario-list',
-  imports: [],
   templateUrl: './funcionario-list.component.html',
-  styleUrl: './funcionario-list.component.css'
+  styleUrls: ['./funcionario-list.component.css']
 })
-export class FuncionarioListComponent {
+export class FuncionarioListComponent implements OnInit {
+  funcionarios: Funcionario[] = [];
 
+  constructor(private funcionarioService: FuncionarioService) { }
+
+  ngOnInit(): void {
+    this.getFuncionarios();
+  }
+
+  getFuncionarios(): void {
+    this.funcionarioService.getFuncionarios().subscribe((data) => {
+      this.funcionarios = data;
+    });
+  }
 }
