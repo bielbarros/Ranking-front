@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { FuncionarioListComponent } from './components/funcionario-list/funcionario-list.component';
+import { FuncionarioCreateComponent } from './components/funcionario-create/funcionario-create.component';
+import { FuncionarioUpdateComponent } from './components/funcionario-update/funcionario-update.component';
+import { FuncionarioDeleteComponent } from './components/funcionario-delete/funcionario-delete.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,  // Tornando o AppComponent standalone
+  imports: [RouterModule, FuncionarioListComponent, FuncionarioCreateComponent, FuncionarioUpdateComponent, FuncionarioDeleteComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ranking-funcionarios';
+  title = 'Meu App de Funcionários'; // Defina a variável title
 }
