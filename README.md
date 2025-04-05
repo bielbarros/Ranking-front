@@ -1,59 +1,128 @@
-# RankingFuncionarios
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+# 📦 Commercial System Frontend — Angular
 
-## Development server
+Este repositório contém o frontend do sistema comercial desenvolvido em Angular. A aplicação oferece uma interface dinâmica, responsiva e interativa, integrada com uma API RESTful, voltada para o gerenciamento de processos comerciais como cadastro de clientes, controle de estoque, vendas e relatórios.
 
-To start a local development server, run:
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- [Angular CLI](https://angular.io/cli) v16+
+- [TypeScript](https://www.typescriptlang.org/)
+- [RxJS](https://rxjs.dev/)
+- [SCSS](https://sass-lang.com/)
+- [Angular Material](https://material.angular.io/) (ou Bootstrap)
+- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- Integração com [API REST (Spring Boot)](https://spring.io/projects/spring-boot)
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```bash
+src/
+├── app/
+│   ├── core/                # Serviços, interceptors, guards e helpers
+│   ├── shared/              # Componentes e módulos reutilizáveis
+│   ├── features/            # Módulos de funcionalidades (ex: vendas, produtos, etc)
+│   ├── layout/              # Componentes de layout (navbar, sidebar)
+│   └── app-routing.module.ts
+├── assets/                  # Recursos estáticos (imagens, JSONs, etc)
+└── environments/            # Configurações de ambiente
+```
+
+---
+
+## ⚙️ Instalação e Execução Local
+
+### Pré-requisitos
+
+- Node.js (v18+)
+- Angular CLI
+- Git
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/nome-do-repo.git
+
+# Acesse o diretório do projeto
+cd nome-do-repo
+
+# Instale as dependências
+npm install
+
+# Execute em modo de desenvolvimento
 ng serve
+
+# Acesse via http://localhost:4200/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🔐 Autenticação e Autorização
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Login com autenticação JWT
+- Interceptor HTTP configurado para envio automático do token
+- Guards protegendo rotas por perfis (admin, usuário, etc.)
 
-```bash
-ng generate component component-name
+---
+
+## 📡 Integração com Backend
+
+A comunicação é feita via **HTTPClient** usando endpoints RESTful. URLs e tokens são configuráveis via `environment.ts`.
+
+Exemplo de consumo:
+
+```typescript
+this.http.get<Produto[]>(`${environment.apiUrl}/produtos`);
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+
+## 🧪 Testes
 
 ```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+# Rodar testes unitários
 ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
+# Rodar testes end-to-end
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🛠️ Scripts Úteis
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| Comando                  | Descrição                      |
+|--------------------------|-------------------------------|
+| `ng serve`               | Inicia o servidor de dev       |
+| `ng build`               | Compila o projeto              |
+| `npm run lint`           | Executa análise de código      |
+| `npm run format`         | Formata os arquivos com Prettier |
+
+---
+
+## 🗂️ Funcionalidades Implementadas
+
+- [] Login e logout com JWT
+- [x] Cadastro e edição de colaboradores
+- [] Dashboard com gráficos (em breve)
+
+---
+
+## 📌 Roadmap
+
+- [ ] Internacionalização (i18n)
+- [ ] Responsividade mobile completa
+- [ ] Tema dark/light
+- [ ] Implementação de PWA
+
+---
+
+## 👨‍💻 Desenvolvido por
+
+**Gabriel Barros**
+
+Desenvolvedor Full Stack | Foco em Java, Angular e soluções modernas para web.
+
+---
