@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-funcionario-create',
-  imports: [],
+  standalone: true,  // Tornando o FuncionarioCreateComponent standalone
   templateUrl: './funcionario-create.component.html',
-  styleUrl: './funcionario-create.component.css'
+  styleUrls: ['./funcionario-create.component.css']
 })
 export class FuncionarioCreateComponent {
-
 }

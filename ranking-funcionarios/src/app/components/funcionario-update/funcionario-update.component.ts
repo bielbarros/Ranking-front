@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-funcionario-update',
-  imports: [],
+  standalone: true,  // Tornando o FuncionarioUpdateComponent standalone
   templateUrl: './funcionario-update.component.html',
-  styleUrl: './funcionario-update.component.css'
+  styleUrls: ['./funcionario-update.component.css']
 })
 export class FuncionarioUpdateComponent {
-
 }
