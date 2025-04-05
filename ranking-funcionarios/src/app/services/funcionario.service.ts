@@ -8,7 +8,7 @@ import { Funcionario } from '../models/funcionario.model';
 })
 export class FuncionarioService {
 
-  private apiUrl = 'http://localhost:8080/funcionarios'; // URL da sua API
+  private apiUrl = 'http://localhost:8080/funcionarios/ranking'; // URL da sua API
 
   constructor(private http: HttpClient) { }
 
