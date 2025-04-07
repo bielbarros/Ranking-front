@@ -30,5 +30,25 @@ export class FuncionarioListComponent implements OnInit {
       }
     );
   }
+
+  criterioOrdenacao = 'nome';
+
+  ordenarFuncionarios(): void {
+    this.funcionarios.sort((a, b) => {
+      if (this.criterioOrdenacao === 'nome') {
+        return a.nome.localeCompare(b.nome);
+      } else if (this.criterioOrdenacao === 'pontos') {
+        return b.pontos - a.pontos;
+      } else if (this.criterioOrdenacao === 'meta') {
+        const metaA = parseInt(a.meta.match(/\d+/)?.[0] || '0', 10);
+        const metaB = parseInt(b.meta.match(/\d+/)?.[0] || '0', 10);
+        return metaB - metaA;
+      }
+      return 0;
+    });
+  }
   
 }
+
+
+
