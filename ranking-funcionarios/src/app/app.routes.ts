@@ -5,8 +5,10 @@ import { FuncionarioUpdateComponent } from './components/funcionario-update/func
 import { FuncionarioDeleteComponent } from './components/funcionario-delete/funcionario-delete.component';
 
 export const routes: Routes = [
-  { path: '', component: FuncionarioListComponent },
-  { path: 'create', component: FuncionarioCreateComponent },
-  { path: 'update', component: FuncionarioUpdateComponent },
-  { path: 'delete', component: FuncionarioDeleteComponent }
+  { path: 'funcionarios', component: FuncionarioListComponent },
+  { path: 'funcionarios/create', component: FuncionarioCreateComponent },
+  { path: 'funcionarios/update/:id', component: FuncionarioUpdateComponent },
+  { path: 'funcionarios/delete/:id', component: FuncionarioDeleteComponent },
+  { path: '', redirectTo: '/funcionarios', pathMatch: 'full' }
 ];
+

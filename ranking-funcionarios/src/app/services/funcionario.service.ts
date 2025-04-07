@@ -19,4 +19,9 @@ export class FuncionarioService {
   criarFuncionario(funcionario: Funcionario): Observable<Funcionario> {
     return this.http.post<Funcionario>(this.apiUrl + '/criar', funcionario);
   }
+
+  deletarFuncionario(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl.replace('/ranking', '')}/${id}`);
+  }
+  
 }
