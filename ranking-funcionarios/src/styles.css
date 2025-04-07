@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  .card-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .table th,
+  .table td {
+    vertical-align: middle;
+  }
+  
