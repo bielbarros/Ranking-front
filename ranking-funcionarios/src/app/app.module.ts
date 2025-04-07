@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
 import { FuncionarioListComponent } from './components/funcionario-list/funcionario-list.component';
 import { FuncionarioCreateComponent } from './components/funcionario-create/funcionario-create.component';
 import { FuncionarioUpdateComponent } from './components/funcionario-update/funcionario-update.component';

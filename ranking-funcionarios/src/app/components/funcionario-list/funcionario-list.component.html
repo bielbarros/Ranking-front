@@ -1,20 +1,31 @@
-<h2>Lista de Funcionários</h2>
-
-
-
-<table class="tabela-funcionarios">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Pontos</th>
-      <th>Meta</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let funcionario of funcionarios">
-      <td>{{ funcionario.nome }}</td>
-      <td>{{ funcionario.pontos }}</td>
-      <td>{{ funcionario.meta }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+      <h4 class="mb-0">Lista de Funcionários</h4>
+      <a routerLink="/funcionarios/create" class="btn btn-light btn-sm">+ Novo Funcionário</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Nome</th>
+            <th>Pontos</th>
+            <th>Meta</th>
+            <th class="text-center">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let funcionario of funcionarios">
+            <td>{{ funcionario.nome }}</td>
+            <td>{{ funcionario.pontos }}</td>
+            <td>{{ funcionario.meta }}</td>
+            <td class="text-center">
+              <a [routerLink]="['/funcionarios/update', funcionario.id]" class="btn btn-warning btn-sm me-2">Editar</a>
+              <a [routerLink]="['/funcionarios/delete', funcionario.id]" class="btn btn-danger btn-sm">Deletar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

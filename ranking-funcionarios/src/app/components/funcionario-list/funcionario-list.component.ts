@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service'; // ajuste o caminho se necessário
 import { Funcionario } from '../../models/funcionario.model';
@@ -6,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-funcionario-list',
   standalone: true,  // Tornando o FuncionarioListComponent standalone
-  imports: [CommonModule],  // Importando CommonModule para suportar ngIf, ngFor, etc.
+  imports: [CommonModule, RouterModule],  // Importando CommonModule para suportar ngIf, ngFor, etc.
   templateUrl: './funcionario-list.component.html',
   styleUrls: ['./funcionario-list.component.css']
 })
