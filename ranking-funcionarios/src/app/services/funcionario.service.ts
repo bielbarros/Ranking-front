@@ -8,20 +8,20 @@ import { Funcionario } from '../models/funcionario.model';
 })
 export class FuncionarioService {
 
-  private apiUrl = 'http://localhost:8080/funcionarios/ranking'; // URL da sua API
+  private baseUrl = 'http://localhost:8080/funcionarios';
 
   constructor(private http: HttpClient) { }
 
   getFuncionarios(): Observable<Funcionario[]> {
-    return this.http.get<Funcionario[]>(this.apiUrl);
+    return this.http.get<Funcionario[]>(`${this.baseUrl}/ranking`);
   }
 
   criarFuncionario(funcionario: Funcionario): Observable<Funcionario> {
-    return this.http.post<Funcionario>(this.apiUrl + '/criar', funcionario);
+    return this.http.post<Funcionario>(`${this.baseUrl}/criar`, funcionario);
   }
 
   deletarFuncionario(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl.replace('/ranking', '')}/${id}`);
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
-  
 }
+

@@ -1,1 +1,14 @@
-<p>funcionario-create works!</p>
+<h2>Cadastrar Funcionário</h2>
+
+<form (ngSubmit)="criarFuncionario()" #formFuncionario="ngForm">
+  <label>Nome:</label>
+  <input type="text" name="nome" [(ngModel)]="funcionario.nome" required />
+
+  <label>Meta:</label>
+  <input type="text" name="meta" [(ngModel)]="funcionario.meta" required />
+
+  <label>Pontos:</label>
+  <input type="number" name="pontos" [(ngModel)]="funcionario.pontos" required />
+
+  <button type="submit" [disabled]="formFuncionario.invalid">Salvar</button>
+</form>
