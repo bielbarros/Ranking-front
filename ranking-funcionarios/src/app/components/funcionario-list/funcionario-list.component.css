@@ -1,35 +1,27 @@
-.tabela-funcionarios {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  .tabela-funcionarios th,
-  .tabela-funcionarios td {
-    border: 1px solid #ccc;
-    padding: 12px 16px;
-    text-align: center;
-  }
-  
-  .tabela-funcionarios th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-  }
-  
-  .tabela-funcionarios tr:nth-child(even) {
-    background-color: #fafafa;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
-  }
-  
-  tr:hover {
-    background-color: #f0f8ff;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
+.btn-editar {
+  background-color: #f0ad4e; /* tom amarelo */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-editar:hover {
+  background-color: #ec971f;
+}
+
+.btn-deletar {
+  background-color: #d90429; /* tom vermelho CNA */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-deletar:hover {
+  background-color: #a6001f;
+}
