@@ -45,3 +45,11 @@ form {
     background-color: #8b0000;
   }
   
+  .btn-cancel {
+    background-color: #aaa;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+  }

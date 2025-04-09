@@ -37,4 +37,9 @@ export class FuncionarioUpdateComponent implements OnInit {
       this.router.navigate(['/']); // Voltar para a lista após atualizar
     });
   }
+
+  cancelar(): void {
+    this.router.navigate(['/']);
+  }
+
 }

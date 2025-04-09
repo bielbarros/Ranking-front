@@ -35,4 +35,10 @@ export class FuncionarioCreateComponent {
       }
     });
   }
+
+  cancelar(): void {
+    this.router.navigate(['/']);
+  }
+
+
 }

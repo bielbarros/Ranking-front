@@ -11,4 +11,6 @@
   <input type="number" name="pontos" [(ngModel)]="funcionario.pontos" required />
 
   <button type="submit" [disabled]="formFuncionario.invalid">Salvar</button>
+  <button class="btn-cancel" (click)="cancelar()">Cancelar</button>
+  
 </form>

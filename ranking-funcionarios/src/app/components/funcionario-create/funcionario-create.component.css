@@ -60,3 +60,12 @@ button:disabled {
 button:hover:not(:disabled) {
   background-color: #a0001e;
 }
+
+.btn-cancel {
+  background-color: #aaa;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
