@@ -25,3 +25,23 @@
 .btn-deletar:hover {
   background-color: #a6001f;
 }
+
+
+.card-header h4 {
+  font-size: 1.5rem;
+}
+
+.card-header a.btn {
+  font-weight: bold;
+}
+
+.card-header {
+  background-color: #850000; /* substitui o bg-primary */
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.card {
+  margin-top: 20px; /* espaçamento externo */
+}

@@ -22,3 +22,15 @@ body {
     vertical-align: middle;
   }
   
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    margin-bottom: 20px; /* espaço entre logo e card */
+  }
+  
+  .logo {
+    max-height: 200px;
+    height: auto;
+  }
+  
