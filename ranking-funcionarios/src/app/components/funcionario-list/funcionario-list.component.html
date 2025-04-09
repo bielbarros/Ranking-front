@@ -2,7 +2,6 @@
   <img src="assets/logo.png" alt="Logo da Empresa" class="logo" />
 </div>
 
-
 <div class="container mt-4">
   <div class="card shadow">
     <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
@@ -10,7 +9,6 @@
       <a routerLink="/funcionarios/create" class="btn btn-light btn-sm">
         <i class="fas fa-plus"></i> Novo Funcionário
       </a>
-      
     </div>
     <div class="table-responsive">
       <table class="table table-striped table-hover mb-0">
@@ -23,8 +21,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let funcionario of funcionarios">
-            <td>{{ funcionario.nome }}</td>
+          <tr *ngFor="let funcionario of funcionarios; let i = index">
+            <td>
+              <span *ngIf="i === 0">🥇</span>
+              <span *ngIf="i === 1">🥈</span>
+              <span *ngIf="i === 2">🥉</span>
+              {{ funcionario.nome }}
+            </td>
             <td>{{ funcionario.pontos }}</td>
             <td>{{ funcionario.meta }}</td>
             <td class="text-center">
@@ -34,9 +37,7 @@
               <a [routerLink]="['/funcionarios/delete', funcionario.id]" class="btn btn-danger btn-sm">
                 <i class="fas fa-trash-alt"></i> Deletar
               </a>
-              
             </td>
-            
           </tr>
         </tbody>
       </table>

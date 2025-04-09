@@ -18,7 +18,9 @@ export class FuncionarioListComponent implements OnInit {
   constructor(private funcionarioService: FuncionarioService) { }
 
   ngOnInit(): void {
+    this.criterioOrdenacao = 'pontos';  // define como padrão
     this.getFuncionarios();
+    
   }
 
   getFuncionarios(): void {
@@ -26,6 +28,7 @@ export class FuncionarioListComponent implements OnInit {
       (data) => {
         console.log('Funcionarios recebidos:', data);
         this.funcionarios = data;
+        this.ordenarFuncionarios();
       },
       (error) => {
         console.error('Erro ao buscar funcionários:', error);
@@ -48,7 +51,16 @@ export class FuncionarioListComponent implements OnInit {
       }
       return 0;
     });
+  
+  
   }
+
+  getProgresso(funcionario: Funcionario): number {
+    const meta = typeof funcionario.meta === 'string' ? parseInt(funcionario.meta.match(/\d+/)?.[0] || '0', 10) : funcionario.meta;
+    const pontos = funcionario.pontos || 0;
+    return Math.min(100, Math.round((pontos / meta) * 100));
+  }
+  
   
 }
 
