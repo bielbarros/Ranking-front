@@ -1,1 +1,10 @@
-
+<div class="confirm-container" *ngIf="funcionario">
+    <h2>Confirmar Exclusão</h2>
+    <p>Você tem certeza que deseja excluir <strong>{{ funcionario.nome }}</strong>?</p>
+  
+    <div class="buttons">
+      <button class="btn-confirm" (click)="deletarFuncionario()">Sim, excluir</button>
+      <button class="btn-cancel" (click)="cancelar()">Cancelar</button>
+    </div>
+  </div>
+  
