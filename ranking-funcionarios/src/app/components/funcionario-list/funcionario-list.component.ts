@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service'; // ajuste o caminho se necessário
 import { Funcionario } from '../../models/funcionario.model';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-funcionario-list',

@@ -1,1 +1,14 @@
-<p>funcionario-update works!</p>
+<h2>Atualizar Funcionário</h2>
+
+<form (ngSubmit)="atualizarFuncionario()">
+  <label>Nome:</label>
+  <input type="text" [(ngModel)]="funcionario.nome" name="nome" required />
+
+  <label>Meta:</label>
+  <input type="text" [(ngModel)]="funcionario.meta" name="meta" required />
+
+  <label>Pontos:</label>
+  <input type="number" [(ngModel)]="funcionario.pontos" name="pontos" required />
+
+  <button type="submit">Atualizar</button>
+</form>

@@ -23,5 +23,15 @@ export class FuncionarioService {
   deletarFuncionario(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
+
+  getFuncionarioById(id: number): Observable<Funcionario> {
+    return this.http.get<Funcionario>(`http://localhost:8080/funcionarios/${id}`);
+  }
+  
+  atualizarFuncionario(id: number, funcionario: Funcionario): Observable<Funcionario> {
+    return this.http.put<Funcionario>(`http://localhost:8080/funcionarios/${id}`, funcionario);
+  }
+  
+
 }
 
