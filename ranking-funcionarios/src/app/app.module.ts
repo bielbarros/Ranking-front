@@ -8,11 +8,18 @@ import { FuncionarioDeleteComponent } from './components/funcionario-delete/func
 
 @Component({
   selector: 'app-root',
-  standalone: true,  // Adiciona o AppComponent como standalone
-  imports: [RouterModule, FormsModule ,FuncionarioListComponent, FuncionarioCreateComponent, FuncionarioUpdateComponent, FuncionarioDeleteComponent],
+  standalone: true,
+  imports: [
+    RouterModule,
+    FormsModule,
+    FuncionarioListComponent,
+    FuncionarioCreateComponent,
+    FuncionarioUpdateComponent,
+    FuncionarioDeleteComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'Meu App de Funcionários'; // Defina a variável title
-  }
+  title = 'Meu App de Funcionários';
+}

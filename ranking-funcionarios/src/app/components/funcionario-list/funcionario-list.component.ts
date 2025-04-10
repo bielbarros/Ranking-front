@@ -1,42 +1,50 @@
-import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FuncionarioService } from '../../services/funcionario.service'; // ajuste o caminho se necessário
-import { Funcionario } from '../../models/funcionario.model';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { FuncionarioService } from '../../services/funcionario.service';
+import { Funcionario } from '../../models/funcionario.model';
+
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
+import { saveAs } from 'file-saver';
+
+
 @Component({
   selector: 'app-funcionario-list',
-  standalone: true,  // Tornando o FuncionarioListComponent standalone
-  imports: [CommonModule, RouterModule],  // Importando CommonModule para suportar ngIf, ngFor, etc.
+  standalone: true,
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './funcionario-list.component.html',
   styleUrls: ['./funcionario-list.component.css']
 })
 export class FuncionarioListComponent implements OnInit {
   funcionarios: Funcionario[] = [];
+  criterioOrdenacao = 'nome';
 
-  constructor(private funcionarioService: FuncionarioService) { }
+
+  
+
+  constructor(private funcionarioService: FuncionarioService) {}
 
   ngOnInit(): void {
-    this.criterioOrdenacao = 'pontos';  // define como padrão
+    this.criterioOrdenacao = 'pontos'; // ordenação padrão
     this.getFuncionarios();
-    
   }
 
   getFuncionarios(): void {
     this.funcionarioService.getFuncionarios().subscribe(
       (data) => {
-        console.log('Funcionarios recebidos:', data);
+        console.log('Funcionários recebidos:', data);
         this.funcionarios = data;
         this.ordenarFuncionarios();
+        
       },
       (error) => {
         console.error('Erro ao buscar funcionários:', error);
       }
     );
   }
-
-  criterioOrdenacao = 'nome';
 
   ordenarFuncionarios(): void {
     this.funcionarios.sort((a, b) => {
@@ -51,18 +59,38 @@ export class FuncionarioListComponent implements OnInit {
       }
       return 0;
     });
-  
-  
   }
+
 
   getProgresso(funcionario: Funcionario): number {
     const meta = typeof funcionario.meta === 'string' ? parseInt(funcionario.meta.match(/\d+/)?.[0] || '0', 10) : funcionario.meta;
     const pontos = funcionario.pontos || 0;
     return Math.min(100, Math.round((pontos / meta) * 100));
   }
-  
-  
+
+  exportarPDF(): void {
+    const doc = new jsPDF();
+    doc.text('Ranking de Funcionários', 14, 10);
+    autoTable(doc, {
+      head: [['Nome', 'Pontos', 'Meta']],
+      body: this.funcionarios.map(f => [f.nome, f.pontos, f.meta]),
+    });
+    doc.save('ranking-funcionarios.pdf');
+  }
+
+  exportarCSV(): void {
+    const csvRows = [
+      ['Nome', 'Pontos', 'Meta'],
+      ...this.funcionarios.map(f => [f.nome, f.pontos.toString(), f.meta])
+    ];
+    const csvContent = csvRows.map(e => e.join(',')).join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    saveAs(blob, 'ranking-funcionarios.csv');
+  }
+
+
+
+
+
+
 }
-
-
-
