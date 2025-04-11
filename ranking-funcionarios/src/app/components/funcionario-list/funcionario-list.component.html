@@ -48,6 +48,14 @@
               </a>
             </td>
           </tr>
+
+           <!-- Caso a lista esteja vazia -->
+          <tr *ngIf="funcionarios.length === 0">
+            <td colspan="4" class="text-center table-empty-message">
+              Nenhum funcionário cadastrado ainda 😅
+            </td>
+          </tr>
+
         </tbody>
       </table>
     </div>

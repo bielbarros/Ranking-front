@@ -6,31 +6,64 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .card {
-    border-radius: 12px;
-  }
-  
-  .card-header {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
-  
-  .table th,
-  .table td {
-    vertical-align: middle;
-  }
-  
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 3px;
-    margin-bottom: 20px; /* espaço entre logo e card */
-  }
-  
+}
+
+.card {
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.6); /* leve transparência se quiser destacar do fundo */
+  color: white;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* 🔥 LOGO CONTAINER */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 20px 0;
+}
+
+/* 🎯 LOGOS CTRL+PLAY & CNA */
+.logo {
+  max-height: 700px;
+  height: auto;
+  width: 700px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 768px) {
   .logo {
-    max-height: 200px;
-    height: auto;
+    width: 340px;
+    max-height: 340px;
   }
-  
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .card-header h4 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}

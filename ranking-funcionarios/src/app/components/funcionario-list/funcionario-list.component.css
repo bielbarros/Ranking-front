@@ -45,3 +45,14 @@
 .card {
   margin-top: 20px; /* espaçamento externo */
 }
+.card-header .btn {
+  margin-left: 0.5rem;
+  border-radius: 8px;
+}
+/* Quando não há dados na tabela */
+.table-empty-message {
+  padding: 1rem;
+  font-style: italic;
+  color: #667;
+}
+
