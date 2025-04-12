@@ -1,7 +1,7 @@
 
 # 📦 Commercial System Frontend — Angular
 
-Este repositório contém o frontend do sistema comercial desenvolvido em Angular. A aplicação oferece uma interface dinâmica, responsiva e interativa, integrada com uma API RESTful, voltada para o gerenciamento de processos comerciais como cadastro de clientes, controle de estoque, vendas e relatórios.
+Este repositório contém o frontend do sistema comercial desenvolvido em Angular. A aplicação oferece uma interface dinâmica, responsiva e interativa, integrada com uma API RESTful, voltada para o gerenciamento de processos comerciais e acompanhamento de desempenho e metas, podendo cadastrar funcionários e listar metas batidas e pontos adicionados para gestão de métricas.
 
 ---
 
@@ -9,14 +9,31 @@ Este repositório contém o frontend do sistema comercial desenvolvido em Angula
 
 - [Angular CLI](https://angular.io/cli) v16+
 - [TypeScript](https://www.typescriptlang.org/)
-- [RxJS](https://rxjs.dev/)
-- [SCSS](https://sass-lang.com/)
 - [Angular Material](https://material.angular.io/) (ou Bootstrap)
-- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
 - Integração com [API REST (Spring Boot)](https://spring.io/projects/spring-boot)
 
 ---
 
+## 📸 Capturas de Tela
+
+### 🏠 Tela Principal
+![Tela Principal](ranking-funcionarios\src\assets\telaPrincipal.png)
+
+### 📌 Cadastro
+![Cadastro](ranking-funcionarios\src\assets\cadastro.png)
+
+### 📝 Edição
+![Edição](ranking-funcionarios\src\assets\edição.png)
+
+### 🗑️ Exclusão
+![Exclusão](ranking-funcionarios\src\assets\exclusão.png)
+
+### 📄 PDF Gerado
+![PDF Gerado](ranking-funcionarios\src\assets\pdfGerado.png)
+
+
+
+---
 ## 📁 Estrutura do Projeto
 
 ```bash
@@ -59,13 +76,6 @@ ng serve
 
 ---
 
-## 🔐 Autenticação e Autorização
-
-- Login com autenticação JWT
-- Interceptor HTTP configurado para envio automático do token
-- Guards protegendo rotas por perfis (admin, usuário, etc.)
-
----
 
 ## 📡 Integração com Backend
 
@@ -77,17 +87,6 @@ Exemplo de consumo:
 this.http.get<Produto[]>(`${environment.apiUrl}/produtos`);
 ```
 
----
-
-## 🧪 Testes
-
-```bash
-# Rodar testes unitários
-ng test
-
-# Rodar testes end-to-end
-ng e2e
-```
 
 ---
 
@@ -104,7 +103,7 @@ ng e2e
 
 ## 🗂️ Funcionalidades Implementadas
 
-- [] Login e logout com JWT
+- [] Login e logout com JWT (em breve)
 - [x] Cadastro e edição de colaboradores
 - [] Dashboard com gráficos (em breve)
 
