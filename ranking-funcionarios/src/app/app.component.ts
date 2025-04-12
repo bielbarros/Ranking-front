@@ -4,11 +4,11 @@ import { FuncionarioListComponent } from './components/funcionario-list/funciona
 import { FuncionarioCreateComponent } from './components/funcionario-create/funcionario-create.component';
 import { FuncionarioUpdateComponent } from './components/funcionario-update/funcionario-update.component';
 import { FuncionarioDeleteComponent } from './components/funcionario-delete/funcionario-delete.component';
-
+import { FooterComponent } from './shared/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,  // Tornando o AppComponent standalone
-  imports: [RouterModule, FuncionarioListComponent, FuncionarioCreateComponent, FuncionarioUpdateComponent, FuncionarioDeleteComponent],
+  imports: [RouterModule, FooterComponent, FuncionarioListComponent, FuncionarioCreateComponent, FuncionarioUpdateComponent, FuncionarioDeleteComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

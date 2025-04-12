@@ -1,0 +1,23 @@
+footer {
+  background-color: #aa0101 !important;
+  color: white;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block; /* Isso aqui é essencial pro transform funcionar */
+    transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* Deixa com o cursor de link */
+}
+
+footer a:hover {
+  color: #0640ff;
+  text-decoration: underline;
+  transform: scale(1.05) !important;
+}
+
+footer a.footer-link {
+    margin: 0 5px; /* Espaço de 5px nos lados esquerdo e direito */
+}
+  
