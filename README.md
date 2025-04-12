@@ -17,19 +17,19 @@ Este repositório contém o frontend do sistema comercial desenvolvido em Angula
 ## 📸 Capturas de Tela
 
 ### 🏠 Tela Principal
-![Tela Principal](./src/assets/telaPrincipal.png)
+![Tela Principal](/ranking-funcionarios/src/assets/telaPrincipal.png)
 
 ### 📌 Cadastro
-![Cadastro](./src/assets/cadastro.png)
+![Cadastro](/ranking-funcionarios/src/assets/cadastro.png)
 
 ### 📝 Edição
-![Edição](./src/assets/edição.png)
+![Edição](/ranking-funcionarios/src/assets/edição.png)
 
 ### 🗑️ Exclusão
-![Exclusão](./src/assets/exclusão.png)
+![Exclusão](/ranking-funcionarios/src/assets/exclusão.png)
 
 ### 📄 PDF Gerado
-![PDF Gerado](./src/assets/pdfGerado.png)
+![PDF Gerado](/ranking-funcionarios/src/assets/pdfGerado.png)
 
 
 
