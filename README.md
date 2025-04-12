@@ -1,7 +1,18 @@
 
 # 📦 Commercial System Frontend — Angular
 
-Este repositório contém o frontend do sistema comercial desenvolvido em Angular. A aplicação oferece uma interface dinâmica, responsiva e interativa, integrada com uma API RESTful, voltada para o gerenciamento de processos comerciais e acompanhamento de desempenho e metas, podendo cadastrar funcionários e listar metas batidas e pontos adicionados para gestão de métricas.
+Este repositório contém o **frontend** de um sistema comercial desenvolvido em **Angular**, focado no gerenciamento e acompanhamento de métricas comerciais. A aplicação oferece uma interface **dinâmica**, **responsiva** e **interativa**, proporcionando uma experiência de usuário fluida e eficiente para a gestão de processos e desempenho de colaboradores.
+
+A solução está integrada com uma **API RESTful**, permitindo a comunicação com o backend para realizar operações como **cadastro, edição e exclusão** de funcionários, bem como o gerenciamento de **metas** e **pontos** para controle de desempenho. A aplicação também oferece funcionalidades de **visualização** de métricas e **geração de relatórios em PDF**.
+
+### Funcionalidades principais:
+
+- **Cadastro de funcionários**: Adicione novos colaboradores ao sistema com facilidade.
+- **Edição e exclusão de registros**: Gerencie as informações dos funcionários de maneira eficiente.
+- **Gerenciamento de metas**: Defina e acompanhe as metas batidas e os pontos acumulados pelos colaboradores.
+- **Relatórios em PDF**: Geração de relatórios detalhados sobre o desempenho.
+- **Design responsivo**: A aplicação se adapta automaticamente a diferentes tamanhos de tela, garantindo uma experiência fluida em dispositivos móveis e desktops.
+
 
 ---
 
