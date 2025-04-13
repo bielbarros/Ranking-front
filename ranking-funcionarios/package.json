@@ -2,26 +2,29 @@
   "name": "ranking-funcionarios",
   "version": "0.0.0",
   "scripts": {
-  "ng": "ng",
-  "start": "ng serve",
-  "build": "ng build",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test"
-}
-,
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
-    "@angular/core": "^19.2.0",
+    "@angular/core": "^19.2.6",
     "@angular/forms": "^19.2.0",
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "bootstrap": "^5.3.3",
+    "file-saver": "^2.0.5",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "vite": "^6.2.6",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
